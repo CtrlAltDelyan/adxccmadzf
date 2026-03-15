@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clickable Image Grid</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card span {
+      display: block;
+      padding: 12px;
+      text-align: center;
+      color: #222;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Link Grid</h1>
+
+  <div class="grid">
+    <a class="card" href="https://example1.com" target="_blank" rel="noopener noreferrer">
+      <img src="images/apple.jpg" alt="Example 1" />
+      <span>Example 1</span>
+    </a>
+
+    <a class="card" href="https://example2.com" target="_blank" rel="noopener noreferrer">
+      <img src="images/banana.jpg" alt="Example 2" />
+      <span>Example 2</span>
+    </a>
+
+    <a class="card" href="https://example3.com" target="_blank" rel="noopener noreferrer">
+      <img src="images/watermelon.jpg" alt="Example 3" />
+      <span>Example 3</span>
+    </a>
+
+    <a class="card" href="https://example4.com" target="_blank" rel="noopener noreferrer">
+      <img src="images/cherry.jpg" alt="Example 4" />
+      <span>Example 4</span>
+    </a>
+  </div>
+</body>
+</html>
